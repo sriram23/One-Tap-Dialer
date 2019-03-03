@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">One Tap Dialer</string>
+    <string name="dial">CALL</string>
+    <string name="contact1">அம்மா - 9952178721</string>
+    <string name="contact2">அப்பா - 8508572035</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>

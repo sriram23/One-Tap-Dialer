@@ -26,6 +26,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -62,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         c = db.rawQuery("SELECT * FROM contact",null);
         StringBuffer buffer=new StringBuffer();
         int i=0;
-        LinearLayout L = (LinearLayout)findViewById(R.id.mainlinear);
+        final LinearLayout L = (LinearLayout)findViewById(R.id.mainlinear);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         while(c.moveToNext()){
             buffer.append(c.getString(0)+" - "+c.getString(1));
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             final String num = c.getString(1);
             L1.setOrientation(LinearLayout.HORIZONTAL);
             L1.setPadding(10,10,10,10);
+            L1.setBackgroundColor(getResources().getColor(R.color.Trans));
             final TextView txt = new TextView(this);
             txt.setId(i+1);
             txt.setText(c.getString(0)+" - "+c.getString(1));
@@ -106,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                         L1.removeView(txt);
                         L1.removeView(btn);
                         L1.removeView(del);
+                        L.removeView(L1);
                     } else {
                         Snackbar.make(v, "Invalid Record!", Snackbar.LENGTH_LONG).show();
                     }
@@ -127,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
             if(Build.VERSION.SDK_INT > 22)
             {
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    // TODO: Consider calling
 
                     ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.CALL_PHONE}, 101);
 
@@ -154,6 +157,27 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(MainActivity.this,floating.class);
         startActivity(intent);
+    }
+
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.mymenu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.mybtn) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                finishAffinity();
+            }
+            else{
+                ActivityCompat.finishAffinity(MainActivity.this);
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 

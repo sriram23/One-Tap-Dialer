@@ -5,4 +5,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="call">#02c73b</color>
     <color name="danger">#FF0000</color>
+    <color name="Trans">#fff7f5</color>
 </resources>

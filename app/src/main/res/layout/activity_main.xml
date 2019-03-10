@@ -6,38 +6,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Trans"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <!--<EditText-->
-        <!--android:id="@+id/num"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:inputType="phone"-->
-        <!--android:hint="Enter Phone number"/>-->
-
-    <!--<android.support.constraint.ConstraintLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="vertical">-->
-
-        <!--<Button-->
-            <!--android:id="@+id/call"-->
-            <!--android:onClick="Dial"-->
-            <!--android:layout_width="77dp"-->
-            <!--android:layout_height="77dp"-->
-            <!--android:layout_marginStart="8dp"-->
-            <!--android:layout_marginLeft="8dp"-->
-            <!--android:layout_marginEnd="8dp"-->
-            <!--android:layout_marginRight="8dp"-->
-            <!--android:background="@drawable/round_button"-->
-            <!--android:gravity="center"-->
-            <!--app:layout_constraintEnd_toEndOf="parent"-->
-            <!--app:layout_constraintStart_toStartOf="parent"-->
-            <!--android:text="@string/dial"-->
-            <!--android:textSize="25dp"-->
-            <!--android:textColor="#ffffff"/>-->
-    <!--</android.support.constraint.ConstraintLayout>-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -47,36 +19,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <!--<android.support.constraint.ConstraintLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:padding="10dp">-->
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginLeft="8dp"-->
-                <!--android:layout_marginTop="8dp"-->
-                <!--android:layout_marginBottom="8dp"-->
-                <!--android:text="@string/contact1"-->
-                <!--android:textSize="20dp"-->
-                <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-            <!--<Button-->
-                <!--android:id="@+id/button1"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginRight="8dp"-->
-                <!--android:background="@color/call"-->
-                <!--android:onClick="Dial1"-->
-                <!--android:text="@string/dial"-->
-                <!--android:textColor="#ffffff"-->
-                <!--app:layout_constraintEnd_toEndOf="parent" />-->
-        <!--</android.support.constraint.ConstraintLayout>-->
         <LinearLayout
             android:id="@+id/mainlinear"
             android:layout_width="wrap_content"
@@ -84,48 +26,6 @@
             android:orientation="vertical">
 
         </LinearLayout>
-        <!--<android.support.constraint.ConstraintLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:padding="10dp">-->
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginStart="8dp"-->
-                <!--android:layout_marginLeft="8dp"-->
-                <!--android:layout_marginTop="8dp"-->
-                <!--android:layout_marginBottom="8dp"-->
-                <!--android:text="@string/contact2"-->
-                <!--android:textSize="20dp"-->
-                <!--app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--app:layout_constraintStart_toStartOf="parent"-->
-                <!--app:layout_constraintTop_toTopOf="parent" />-->
-
-            <!--<Button-->
-                <!--android:id="@+id/button2"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginEnd="8dp"-->
-                <!--android:layout_marginRight="8dp"-->
-                <!--android:background="@color/call"-->
-                <!--android:onClick="Dial2"-->
-                <!--android:text="@string/dial"-->
-                <!--android:textColor="#ffffff"-->
-                <!--app:layout_constraintEnd_toEndOf="parent" />-->
-        <!--</android.support.constraint.ConstraintLayout>-->
-            <!--<TextView-->
-                <!--android:id="@+id/newtxt"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--tools:layout_editor_absoluteX="10dp"-->
-                <!--tools:layout_editor_absoluteY="10dp" />-->
-            <!--<Button-->
-                <!--android:id="@+id/fetch"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Fetch"-->
-                <!--android:onClick="fetchdata"/>-->
         </LinearLayout>
     </ScrollView>
 

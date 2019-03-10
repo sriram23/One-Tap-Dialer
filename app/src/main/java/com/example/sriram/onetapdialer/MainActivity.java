@@ -34,6 +34,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,10 +65,11 @@ public class MainActivity extends AppCompatActivity {
         c = db.rawQuery("SELECT * FROM contact",null);
         StringBuffer buffer=new StringBuffer();
         int i=0;
-        final LinearLayout L = (LinearLayout)findViewById(R.id.mainlinear);
+        final LinearLayout L = (LinearLayout) findViewById(R.id.mainlinear);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         while(c.moveToNext()){
             buffer.append(c.getString(0)+" - "+c.getString(1));
+//            final ListView V1 = new ListView(this);
             final LinearLayout L1 = new LinearLayout(this);
             final String num = c.getString(1);
             L1.setOrientation(LinearLayout.HORIZONTAL);
@@ -119,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
             L1.addView(txt);
             L1.addView(btn);
             L1.addView(del);
+//            V1.addView(L1);
             L.addView(L1);
             i++;
         }
